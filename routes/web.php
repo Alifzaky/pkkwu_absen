@@ -25,9 +25,10 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 
 //route untuk dashboard user
 
-Route::middleware(['auth', 'level:2'])->group(function () {
-   
-Route::get('/index',[App\Http\Controllers\Dashboard_userController::class,'index'])->name('index');
+Route::middleware(['auth','level:2'])->group(function(){
+    
+
+Route::get('/user',[App\Http\Controllers\Dashboard_userController::class,'index'])->name('user');
 Route::get('/contack',[App\Http\Controllers\Dashboard_userController::class,'contack'])->name('contack');
 Route::get('/about',[App\Http\Controllers\Dashboard_userController::class,'about'])->name('about');
  
@@ -38,8 +39,8 @@ Route::get('/about',[App\Http\Controllers\Dashboard_userController::class,'about
 
 Route::middleware(['auth', 'level:1'])->group(function () {
     
-    Route::resource('/indexx',App\Http\Controllers\Dashboard_adminController::class);
-    Route::get('/index',[App\Http\Controllers\Dashboard_adminController::class,'indexx'] );
+    Route::resource('/index',App\Http\Controllers\Dashboard_adminController::class);
+    Route::get('/admin',[App\Http\Controllers\Dashboard_adminController::class,'index'] )->name('admin');
     Route::get('/table', [App\Http\Controllers\Dashboard_adminController::class,'table'])->name('table');
     Route::get('/create',[App\Http\Controllers\Dashboard_adminController::class,'create'])->name('create');
     Route::get('/edit',[App\Http\Controllers\Dashboard_adminController::class,'edit'])->name('edit');

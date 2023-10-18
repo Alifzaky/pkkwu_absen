@@ -9,7 +9,7 @@ use App\Models\User;
 
 class Dashboard_adminController extends Controller
 {
-    public function indexx(){
+    public function index(){
       
         return view('admin/index');
     }

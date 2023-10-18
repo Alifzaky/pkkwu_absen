@@ -21,5 +21,5 @@ class UserMiddleware
         }
 
         return abort(403, 'Unauthorized');
-    }
+   }
 }

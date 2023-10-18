@@ -58,7 +58,7 @@ background: linear-gradient(310deg, rgba(220,216,255,1) 26%, rgba(73,194,204,1) 
                                     <td>{!! $table->email !!}</td>
                                     <td>{!! $table->password!!}</td>
                                     <td class="text-center">
-                                        <form onsubmit="return confirm('Apakah Anda Yakin ?');" action="{{ route('indexx.destroy', $table->id) }}" method="POST">
+                                        <form onsubmit="return confirm('Apakah Anda Yakin ?');" action="{{ route('index.destroy', $table->id) }}" method="POST">
                                             <a href="{{ route('edit', $table->id) }}" class="btn btn-sm btn-primary">EDIT</a>
                                             @csrf
                                             @method('DELETE')

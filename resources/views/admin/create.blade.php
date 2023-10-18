@@ -17,7 +17,7 @@ background: linear-gradient(310deg, rgba(228,179,198,1) 42%, rgba(179,55,107,1) 
             <div class="col-md-12">
                 <div class="card border-0 shadow-sm rounded">
                     <div class="card-body">
-                        <form action="{{ route('indexx.store') }}" method="POST" enctype="multipart/form-data">
+                        <form action="{{ route('index.store') }}" method="POST" enctype="multipart/form-data">
                         
                             @csrf
 
