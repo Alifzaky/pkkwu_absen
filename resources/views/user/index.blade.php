@@ -20,6 +20,7 @@
         <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
         <link href="{{ asset('lib/animate/animate.min.css') }}" rel="stylesheet">
         <link href="{{ asset('lib/owlcarousel/assets/owl.carousel.min.css') }}" rel="stylesheet">
+        @vite(['resources/sass/app.scss', 'resources/js/app.js'])
 
         <!-- Template Stylesheet -->
         <link href="css/style.css" rel="stylesheet">
